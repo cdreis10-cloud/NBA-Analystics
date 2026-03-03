@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-black-950: #000000;
+  --color-black-900: #0a0a0a;
+  --color-black-800: #121212;
+  --color-black-700: #1a1a1a;
+  --color-black-600: #242424;
+  --color-gray-500: #333333;
+  --color-gray-400: #666666;
+  --color-gray-300: #888888;
+  --color-gray-200: #aaaaaa;
+  --color-gray-100: #cccccc;
+  --color-green: #00d26a;
+  --color-red: #ff3b3b;
+  --color-yellow: #ffcc00;
+  --color-blue: #0088ff;
+  
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #000;
+  min-height: 100vh;
+  color: #ccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+}
+
+.card-hover {
+  transition: border-color 0.15s ease;
+}
+
+.card-hover:hover {
+  border-color: #333;
+}
+
+.data-table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #111;
+  white-space: nowrap;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.1s ease;
+}
+
+.data-table tbody tr:hover {
+  background: #0d0d0d;
+}
+
+.font-mono, .tabular-nums {
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+input, select {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  color: #ccc;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+input:focus, select:focus {
+  border-color: #333;
+  outline: none;
+}
+
+input::placeholder {
+  color: #444;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 1px solid #0088ff;
+  outline-offset: 2px;
+}
