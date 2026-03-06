@@ -165,22 +165,18 @@ export default function ComparePage() {
       return val.toFixed(1);
     };
 
-    const getColor = (v1?: number, v2?: number, isFirst?: boolean) => {
-      if (v1 === undefined || v2 === undefined) return 'text-white';
-      const better = higherIsBetter ? v1 > v2 : v1 < v2;
-      const worse = higherIsBetter ? v1 < v2 : v1 > v2;
-      if (isFirst && better) return 'text-[#00d26a]';
-      if (isFirst && worse) return 'text-[#ff3b3b]';
-      if (!isFirst && better) return 'text-[#ff3b3b]';
-      if (!isFirst && worse) return 'text-[#00d26a]';
-      return 'text-white';
+    const getColor = (myVal?: number, theirVal?: number) => {
+      if (myVal === undefined || theirVal === undefined) return "text-white";
+      if (myVal === theirVal) return "text-white";
+      const isBetter = higherIsBetter ? myVal > theirVal : myVal < theirVal;
+      return isBetter ? "text-[#00d26a]" : "text-[#ff3b3b]";
     };
 
     return (
       <tr>
-        <td className={`font-mono text-[13px] py-2 ${getColor(val1, val2, true)}`}>{formatVal(val1)}</td>
+        <td className={`font-mono text-[13px] py-2 ${getColor(val1, val2)}`}>{formatVal(val1)}</td>
         <td className="text-[#666] text-[12px] text-center py-2">{label}</td>
-        <td className={`font-mono text-[13px] text-right py-2 ${getColor(val2, val1, false)}`}>{formatVal(val2)}</td>
+        <td className={`font-mono text-[13px] text-right py-2 ${getColor(val2, val1)}`}>{formatVal(val2)}</td>
       </tr>
     );
   };
