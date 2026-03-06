@@ -246,13 +246,13 @@ function getBreakoutTier(
   // Players who have ALREADY broken out should not appear as "breakout candidates"
   
   // Clear stars: 20+ PPG = you've made it
-  if (player.pointsPerGame >= 20) return 'Established';
+  if (player.pointsPerGame >= 18) return 'Established';
   
   // High-usage starters: 18+ PPG with significant role
   if (player.pointsPerGame >= 18 && player.usageRate >= 22) return 'Established';
   
   // Established starters: 15+ PPG playing starter minutes
-  if (player.pointsPerGame >= 15 && player.minutesPerGame >= 28) return 'Established';
+  if (player.pointsPerGame >= 14 && player.minutesPerGame >= 26) return 'Established';
   
   // Past the development window
   if (age > 27) return 'Established';

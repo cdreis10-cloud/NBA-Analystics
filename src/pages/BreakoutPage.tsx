@@ -12,7 +12,7 @@ export default function BreakoutPage() {
   const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc');
 
   const players = useMemo(() => {
-    let filtered = allPlayers.filter(p => p.age <= 27); // Focus on younger players
+    let filtered = allPlayers.filter(p => p.age <= 27 && p.breakout.breakoutTier !== 'Established'); // Focus on younger players
 
     // Age filter
     if (ageFilter !== 'all') {
