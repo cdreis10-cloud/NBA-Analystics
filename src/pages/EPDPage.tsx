@@ -115,6 +115,21 @@ export default function EPDPage() {
         <div className="mb-6">
           <h1 className="text-xl font-semibold text-white">EPD Rankings</h1>
           <p className="text-[13px] text-[#666] mt-1">Effectiveness Per Dollar — player value relative to salary</p>
+          
+          {/* Methodology Description */}
+          <div className="mt-4 p-4 bg-[#0a0a0a] border border-[#1a1a1a] rounded-lg">
+            <h3 className="text-[12px] text-[#888] uppercase tracking-wide mb-2">How EPD Works</h3>
+            <p className="text-[13px] text-[#666] leading-relaxed">
+              EPD measures a player's on-court production relative to their salary cap hit. The formula weighs 
+              <span className="text-[#888]"> scoring efficiency</span>, 
+              <span className="text-[#888]"> playmaking</span>, 
+              <span className="text-[#888]"> rebounding</span>, 
+              <span className="text-[#888]"> defensive impact</span>, and 
+              <span className="text-[#888]"> availability</span> — adjusted for age curve and role context. 
+              Players on rookie contracts often score highest because their production far exceeds their below-market salaries. 
+              Confidence levels reflect games played and statistical consistency.
+            </p>
+          </div>
         </div>
 
         {/* Filters */}

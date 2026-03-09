@@ -81,6 +81,29 @@ export default function BreakoutPage() {
           <p className="text-[13px] text-[#666] mt-1">
             Undervalued players poised for breakout seasons — talent × opportunity
           </p>
+          
+          {/* Methodology Description */}
+          <div className="mt-4 p-4 bg-[#0a0a0a] border border-[#1a1a1a] rounded-lg">
+            <h3 className="text-[12px] text-[#888] uppercase tracking-wide mb-2">How Breakout Scoring Works</h3>
+            <p className="text-[13px] text-[#666] leading-relaxed mb-3">
+              The core insight: <span className="text-white">talent alone doesn't predict breakouts — opportunity matters equally</span>. 
+              A player's Breakout Score multiplies their Talent Score by their Opportunity Score.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[12px]">
+              <div>
+                <span className="text-[#888] font-medium">Talent Score</span>
+                <span className="text-[#666]"> factors age-adjusted production, year-over-year improvement velocity, physical tools, shooting efficiency, and skill development trajectory.</span>
+              </div>
+              <div>
+                <span className="text-[#888] font-medium">Opportunity Score</span>
+                <span className="text-[#666]"> factors available minutes on the roster, team's developmental investment, coaching quality for player development, and role clarity.</span>
+              </div>
+            </div>
+            <p className="text-[13px] text-[#555] mt-3 italic">
+              This explains why a player like Jalen Brunson exploded in New York after being buried in Dallas's depth chart — 
+              same talent, dramatically different opportunity.
+            </p>
+          </div>
         </div>
 
         {/* Filters */}
